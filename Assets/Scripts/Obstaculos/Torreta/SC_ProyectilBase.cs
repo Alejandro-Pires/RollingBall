@@ -1,52 +1,54 @@
-using System;
 using UnityEngine;
 
-[RequireComponent(typeof(Rigidbody))]
-public abstract class SC_ProyectilBase : MonoBehaviour
+namespace Obstaculos.Torreta
 {
-    [Header("Ajustes Base")]
-    [SerializeField] protected float velocidadBala = 10f;
-    [SerializeField] protected float tiempoVida = 3f;
-
-    private Rigidbody rb;
-
-    private void Awake()
+    [RequireComponent(typeof(Rigidbody))]
+    public abstract class SC_ProyectilBase : MonoBehaviour
     {
-        rb = GetComponent<Rigidbody>();
-    }
-    
-    private void OnEnable()
-    {
-        rb.linearVelocity = transform.forward * velocidadBala;
-        Invoke(nameof(Desactivar), tiempoVida);
-    }
+        [Header("Ajustes Base")]
+        [SerializeField] protected float velocidadBala = 10f;
+        [SerializeField] protected float tiempoVida = 3f;
 
-    private void OnDisable()
-    {
-        CancelInvoke();
-        rb.linearVelocity = Vector3.zero;
-        // se para la objeto para que
-        // al volver a dispararse no acumule la velocidad anterior
-    }
+        private Rigidbody rb;
 
-    private void Desactivar()
-    {
-        gameObject.SetActive(false);
-    }
-
-    // Método abstracto: Permite a las hijas a decidir qué pasa al chocar
-    protected abstract void AplicarEfecto(GameObject jugador);
-
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.CompareTag("Player"))
+        private void Awake()
         {
-            AplicarEfecto(other.gameObject);
-            Desactivar();
+            rb = GetComponent<Rigidbody>();
         }
-        else if (!other.CompareTag("Proyectil")) // las balas se ignoran
+    
+        private void OnEnable()
         {
-            Desactivar();
+            rb.linearVelocity = transform.forward * velocidadBala;
+            Invoke(nameof(Desactivar), tiempoVida);
+        }
+
+        private void OnDisable()
+        {
+            CancelInvoke();
+            rb.linearVelocity = Vector3.zero;
+            // se para la objeto para que
+            // al volver a dispararse no acumule la velocidad anterior
+        }
+
+        private void Desactivar()
+        {
+            gameObject.SetActive(false);
+        }
+
+        // Método abstracto: Permite a las hijas a decidir qué pasa al chocar
+        protected abstract void AplicarEfecto(GameObject jugador);
+
+        private void OnTriggerEnter(Collider other)
+        {
+            if (other.CompareTag("Player"))
+            {
+                AplicarEfecto(other.gameObject);
+                Desactivar();
+            }
+            else if (!other.CompareTag("Proyectil")) // las balas se ignoran
+            {
+                Desactivar();
+            }
         }
     }
 }

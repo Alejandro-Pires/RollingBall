@@ -1,16 +1,18 @@
+using Managers;
 using UnityEngine;
 
-public class SC_Meta : MonoBehaviour
+namespace Scenes_Related
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    public class SC_Meta : MonoBehaviour
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        private void OnTriggerEnter(Collider other)
+        {
+            if (!other.CompareTag("Player")) return;
+            
+            if (SC_GameManager.Instance != null)
+            {
+                SC_GameManager.Instance.WinGame();
+            }
+        }
     }
 }

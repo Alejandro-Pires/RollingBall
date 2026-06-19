@@ -1,16 +1,25 @@
+using Managers;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
-public class SC_WinScreen : MonoBehaviour
+namespace Scenes_Related
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    public class SC_WinScreen : MonoBehaviour
     {
-        
-    }
+        [Header("Configuración")]
+        [SerializeField] private int mainMenuSceneIndex = 0;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+        private void Update()
+        {
+            if (Input.anyKeyDown)
+            {
+                LoadMenu();
+            }
+        }
+
+        private void LoadMenu()
+        {
+            SceneManager.LoadScene(mainMenuSceneIndex);
+        }
     }
 }
