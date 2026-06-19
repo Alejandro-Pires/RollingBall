@@ -18,7 +18,7 @@ public class SC_Player : MonoBehaviour
 
     private void Start()
     {
-        rb = GetComponent<Rigidbody>();
+        rb = GetComponentInParent<Rigidbody>();
     }
 
     private void Update()

@@ -69,7 +69,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: b45a15fff385e4a46ab2bf7a9b0214e8, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -91,6 +91,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!136 &6895501296087320292
 CapsuleCollider:
@@ -127,8 +128,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f485c0c5fa56e904eb94ec7be94fff87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Canon
-  canonBallPrefab: {fileID: 7749231174889928653, guid: d6466ce2fc5b4444c8baefae88166f17, type: 3}
-  spawnPoint: {fileID: 8575491710940648015}
+  prefabProyectil: {fileID: 0}
+  puntoDisparo: {fileID: 0}
+  cadencia: 4
+  tamanoPool: 5
 --- !u!1 &2767332890306730068
 GameObject:
   m_ObjectHideFlags: 0
@@ -219,6 +222,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!136 &7226623813407282460
 CapsuleCollider:

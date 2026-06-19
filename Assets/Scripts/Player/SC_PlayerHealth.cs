@@ -4,17 +4,17 @@ using System.Collections;
 namespace Player
 {
     public class SC_PlayerHealth : MonoBehaviour, IHittable
-    {
-        [Header("Stats")]
+    { 
+    [Header("Stats")]
     [SerializeField] private int maxHealth = 3;
     private int currentHealth;
-
+    
     [Header("SFX Settings")]
     [SerializeField] private AudioClip clipGolpe;
     [SerializeField] private AudioClip clipMuerte;
     private AudioSource audioSource;
     
-    [Header("User Interface")]
+    [Header("UI")]
     [SerializeField] private GameObject[] heartsSprite;
     
     private bool isDead = false;
@@ -22,7 +22,7 @@ namespace Player
     private void Awake()
     {
         currentHealth = maxHealth;
-        audioSource = GetComponent<AudioSource>();
+        audioSource = GetComponentInParent<AudioSource>();
         UpdateHeartsUI();
     }
     

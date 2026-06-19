@@ -1,7 +1,7 @@
 using System;
 using UnityEngine;
 
-public class Zonaaire : MonoBehaviour
+public class ZonaAire : MonoBehaviour
 {
     /*private Rigidbody rb;
 
@@ -22,7 +22,6 @@ public class Zonaaire : MonoBehaviour
         {
             Rigidbody otherRb = other.gameObject.GetComponent<Rigidbody>();
             otherRb.AddForce(new Vector3(120f,50,0) , ForceMode.Force);
-            
         }
     }
 }
