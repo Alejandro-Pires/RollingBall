@@ -21,6 +21,7 @@ namespace Obstaculos.Torreta
             {
                 GameObject obj = Instantiate(prefabProyectil, transform.position, Quaternion.identity);
                 obj.SetActive(false);
+                
                 poolProyectiles.Enqueue(obj);
             }
         }

@@ -1,10 +1,11 @@
+using System;
 using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody))]
 public abstract class SC_ProyectilBase : MonoBehaviour
 {
     [Header("Ajustes Base")]
-    [SerializeField] protected float velocidad = 20f;
+    [SerializeField] protected float velocidadBala = 10f;
     [SerializeField] protected float tiempoVida = 3f;
 
     private Rigidbody rb;
@@ -13,11 +14,10 @@ public abstract class SC_ProyectilBase : MonoBehaviour
     {
         rb = GetComponent<Rigidbody>();
     }
-
-    // cuando el cañón dispara un proyectil
+    
     private void OnEnable()
     {
-        rb.linearVelocity = transform.forward * velocidad;
+        rb.linearVelocity = transform.forward * velocidadBala;
         Invoke(nameof(Desactivar), tiempoVida);
     }
 

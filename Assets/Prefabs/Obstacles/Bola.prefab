@@ -14,9 +14,9 @@ GameObject:
   - component: {fileID: 8631002620082672838}
   - component: {fileID: 6892534067901016779}
   - component: {fileID: 2582526725369184903}
-  m_Layer: 0
-  m_Name: CanonBall
-  m_TagString: Untagged
+  m_Layer: 6
+  m_Name: Bola
+  m_TagString: Proyectil
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -48,7 +48,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 58291ef5fe7f4f6bb8ac45b0dd3559c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Obstaculos.Torreta.SC_PrEmpuje
-  velocidad: 20
+  velocidadBala: 2
   tiempoVida: 3
   fuerzaEmpuje: 25
 --- !u!33 &4071779472638728473

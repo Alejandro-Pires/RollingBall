@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 7480028024145394213}
   - component: {fileID: 1708475917754245935}
   - component: {fileID: 970927489694009584}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Bala
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -47,7 +47,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d2f4085b3daf4e5f9ecee9e060f99d50, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Obstaculos.Torreta.SC_PrDano
-  velocidad: 20
+  velocidadBala: 2
   tiempoVida: 3
   fuerzaPequena: 8
   cantidadDano: 1
@@ -66,14 +66,14 @@ CapsuleCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.1118458
   m_Height: 0.33730966
-  m_Direction: 0
-  m_Center: {x: -0.03, y: 0, z: 0}
+  m_Direction: 2
+  m_Center: {x: 0, y: 0, z: 0.04}
 --- !u!54 &970927489694009584
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -96,11 +96,11 @@ Rigidbody:
     m_Bits: 0
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
-  m_UseGravity: 1
+  m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!1 &7466433139170761446
 GameObject:
   m_ObjectHideFlags: 0
@@ -112,7 +112,7 @@ GameObject:
   - component: {fileID: 5885772935357525377}
   - component: {fileID: 7446059745095285893}
   - component: {fileID: 39260851433072124}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Skin
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -127,7 +127,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7466433139170761446}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.50000006, y: 0.49999997, z: -0.5, w: -0.5}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.062197708, y: 0.062197708, z: 0.05160103}
   m_ConstrainProportionsScale: 0
@@ -141,7 +141,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7466433139170761446}
-  m_Mesh: {fileID: -6042843973029681290, guid: 2aee1ddea31720748b84bb67b4f906c6, type: 3}
+  m_Mesh: {fileID: -6042843973029681290, guid: 22ece39ba48328c43b4224722c0b9b2f, type: 3}
 --- !u!23 &39260851433072124
 MeshRenderer:
   m_ObjectHideFlags: 0
