@@ -1,7 +1,7 @@
 using System;
 using UnityEngine;
 
-public class Player : MonoBehaviour
+public class SC_Player : MonoBehaviour
 {
     [Header("Configuración de Movimiento")]
     [SerializeField] private float fuerza = 10f;
