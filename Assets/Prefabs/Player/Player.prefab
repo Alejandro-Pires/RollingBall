@@ -45,8 +45,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 001220b759de4c94783fa89b7b25015c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Player
-  fuerza: 4
-  saltoFuerza: 5
+  fuerza: 15
+  saltoFuerza: 8
   distanciaSuelo: 0.5
   capaSuelo:
     serializedVersion: 2
@@ -99,9 +99,9 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9188422788832202297}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.05447, y: 0.568, z: -3.27012}
-  m_LocalScale: {x: 0.38032, y: 0.38032, z: 0.38032}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.8071496, y: 1.3056968, z: -3.27012}
+  m_LocalScale: {x: 0.7904191, y: 0.7904191, z: 0.7904191}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 7563288390402125682}
@@ -140,7 +140,8 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: b7bcd7c6b3acb3241b0d5af1a358b19b, type: 2}
+  - {fileID: 2100000, guid: d7345edb353d0794296950a9adb3ad4d, type: 2}
+  - {fileID: 2100000, guid: 32a76832b79e84347ad9df08b12709c3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -194,8 +195,8 @@ Rigidbody:
   m_GameObject: {fileID: 9188422788832202297}
   serializedVersion: 5
   m_Mass: 1
-  m_LinearDamping: 0
-  m_AngularDamping: 0.05
+  m_LinearDamping: 1.5
+  m_AngularDamping: 2
   m_CenterOfMass: {x: 0, y: 0, z: 0}
   m_InertiaTensor: {x: 1, y: 1, z: 1}
   m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
@@ -209,7 +210,7 @@ Rigidbody:
   m_ImplicitTensor: 1
   m_UseGravity: 1
   m_IsKinematic: 0
-  m_Interpolate: 0
+  m_Interpolate: 1
   m_Constraints: 0
   m_CollisionDetection: 1
 --- !u!96 &9073182310029335688
@@ -238,7 +239,7 @@ TrailRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: d99f1c5626547364d82817dfd31e84bd, type: 2}
+  - {fileID: 2100000, guid: 30d6d179c1de58d4ba96019a609eb820, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -261,7 +262,7 @@ TrailRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Time: 2
+  m_Time: 0.79
   m_PreviewTimeScale: 1
   m_Parameters:
     serializedVersion: 3
@@ -271,7 +272,7 @@ TrailRenderer:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 0.15871048
+        value: 0.8086128
         inSlope: 0
         outSlope: 0
         tangentMode: 0
