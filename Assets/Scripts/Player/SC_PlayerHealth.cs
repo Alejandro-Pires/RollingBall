@@ -64,7 +64,7 @@ namespace Player
                 audioSource.PlayOneShot(clipMuerte);
             }
 
-            // 1. Apagamos los controles de la bola
+            // 1. Se apagan los controles de la bola
             SC_Player scriptMovimiento = GetComponent<SC_Player>();
             if (scriptMovimiento != null) scriptMovimiento.enabled = false;
 

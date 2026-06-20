@@ -11,9 +11,6 @@ namespace UI.Pausa
         [Header("Referencias Visuales")]
         [SerializeField] private GameObject pausePanel;
         
-        //[Header("Navegación UI")]
-        //[SerializeField] private GameObject firstSelectedButton;
-
         private void Awake()
         {
             if (Instance == null) Instance = this;
@@ -56,7 +53,6 @@ namespace UI.Pausa
     
         public void RestartGame()
         {
-            // Es vital devolver el tiempo a la normalidad antes de recargar
             Time.timeScale = 1f;
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
@@ -64,7 +60,6 @@ namespace UI.Pausa
         public void GoToMainMenu()
         {
             Time.timeScale = 1f;
-            
             if (SC_GameManager.Instance != null)
             {
                 Destroy(SC_GameManager.Instance.gameObject);

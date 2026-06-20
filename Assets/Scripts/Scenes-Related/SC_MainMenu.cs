@@ -1,16 +1,24 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
-public class SC_MainMenu : MonoBehaviour
+namespace UI.MainMenu
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    public class SC_MainMenu : MonoBehaviour
     {
-        
-    }
+        [Header("Configuración")]
+        [SerializeField] private int indiceNivelJuego = 1;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+        private void Update()
+        {
+            if (Input.anyKeyDown)
+            {
+                EmpezarJuego();
+            }
+        }
+
+        private void EmpezarJuego()
+        {
+            SceneManager.LoadScene(indiceNivelJuego);
+        }
     }
 }
