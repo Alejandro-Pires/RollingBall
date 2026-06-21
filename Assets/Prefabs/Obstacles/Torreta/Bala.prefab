@@ -29,7 +29,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -0.038871}
-  m_LocalScale: {x: 6.837904, y: 6.837904, z: 6.837904}
+  m_LocalScale: {x: 11.511612, y: 11.511612, z: 11.511612}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 5885772935357525377}
@@ -47,8 +47,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d2f4085b3daf4e5f9ecee9e060f99d50, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Obstaculos.Torreta.SC_PrDano
-  velocidadBala: 2
-  tiempoVida: 3
+  velocidadBala: 35
+  tiempoVida: 1
   fuerzaPequena: 8
   cantidadDano: 1
 --- !u!136 &1708475917754245935
@@ -70,10 +70,10 @@ CapsuleCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.07074641
-  m_Height: 0.3157228
+  m_Radius: 0.07
+  m_Height: 0.30064988
   m_Direction: 2
-  m_Center: {x: -0.0292536, y: 0, z: 0.050793465}
+  m_Center: {x: -0.029253602, y: 0, z: 0.035707753}
 --- !u!54 &970927489694009584
 Rigidbody:
   m_ObjectHideFlags: 0

@@ -48,9 +48,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 58291ef5fe7f4f6bb8ac45b0dd3559c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Obstaculos.Torreta.SC_PrEmpuje
-  velocidadBala: 15
-  tiempoVida: 5
-  fuerzaEmpuje: 25
+  velocidadBala: 100
+  tiempoVida: 0.7
+  fuerzaEmpuje: 350
 --- !u!33 &4071779472638728473
 MeshFilter:
   m_ObjectHideFlags: 0
